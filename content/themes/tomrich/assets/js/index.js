@@ -2,6 +2,13 @@
  * Main JS file for Casper behaviours
  */
 
+// Off Canvas
+$(".menu-link").click(function(){
+  $("#menu").toggleClass("active");
+  $(".container").toggleClass("active");
+  $("footer").toggleClass("active");
+});
+
 /*globals jQuery, document */
 (function ($) {
     "use strict";
@@ -90,3 +97,37 @@ $('.logoimg').on('dragstart', function(event) { event.preventDefault(); });
   };
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
+
+//Social Colours 
+$(document).ready(function () {
+  $('#email').hover(function () {
+    $('#contact').css("background-color", "#de4438");
+  });
+  $('#email').mouseleave(function () {
+    $('#contact').css("background-color", "#2D2D2D");
+  });
+  $('#youtube').hover(function () {
+    $('#contact').css("background-color", "#af201e");
+  });
+  $('#youtube').mouseleave(function () {
+    $('#contact').css("background-color", "#2D2D2D");
+  });
+  $('#twitter').hover(function () {
+    $('#contact').css("background-color", "#4090FF");
+  });
+  $('#twitter').mouseleave(function () {
+    $('#contact').css("background-color", "#2D2D2D");
+  });
+  $('#gplus').hover(function () {
+    $('#contact').css("background-color", "#dd4b39");
+  });
+  $('#gplus').mouseleave(function () {
+    $('#contact').css("background-color", "#2D2D2D");
+  });
+  $('#linkedin').hover(function () {
+    $('#contact').css("background-color", "#3351a5");
+  });
+  $('#linkedin').mouseleave(function () {
+    $('#contact').css("background-color", "#2D2D2D");
+  });
+});
