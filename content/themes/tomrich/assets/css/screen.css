@@ -91,7 +91,8 @@ body {
     font-family: 'Droid Serif', serif;
     font-size: 2.0rem;
     line-height: 1.65em;
-    color: #3A4145;
+    letter-spacing: 0.008em;
+    color: #4A4A4A;
     background-color: #F7F7F7;
 }
 
@@ -114,6 +115,7 @@ h4, h5, h6 {
     margin-top: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
+    color: #3A4145;
 }
 
 h1 {
@@ -433,7 +435,7 @@ main {
     font-size: 1.8rem;
     line-height: 1.5em;
     font-weight: 300;
-    font-family: 'Droid Serif', serif;
+    font-family: 'PT Serif', serif;
     letter-spacing: 0;
     opacity: 0.9;
 }
