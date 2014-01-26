@@ -187,6 +187,10 @@ hr {
     padding: 0;
 }
 
+.ads {
+    margin: 1.3em 0;
+}
+
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
