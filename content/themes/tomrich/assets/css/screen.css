@@ -192,7 +192,11 @@ hr {
 }
 
 .ads-foot {
-    margin: 3.2em 0 1.3em 0;
+    margin: 3.2em 0 2.5em 0;
+}
+
+.ads-foot-bottom {
+    margin: 2.5em 0;
 }
 
 blockquote {
