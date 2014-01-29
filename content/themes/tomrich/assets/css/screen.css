@@ -1131,10 +1131,10 @@ transition: color 0.3s ease;
 
     .post {
         width:auto;
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 1em;
-        line-height: 1.3em;
+        margin-left: 22px;
+        margin-right: 22px;
+        font-size: 0.95em;
+        line-height: 1.4em;
     }
 
     .blog-title {
@@ -1144,7 +1144,6 @@ transition: color 0.3s ease;
     .blog-description {
         font-size: 1.5rem;
     }
-
 
     h1, h2 {
         font-size: 3rem;
