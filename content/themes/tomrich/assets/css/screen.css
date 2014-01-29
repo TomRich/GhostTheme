@@ -1059,7 +1059,7 @@ transition: color 0.3s ease;
     }
 
     .post {
-        font-size: 0.9em;
+        font-size: 1em;
         line-height: 1.6em;
     }
 
@@ -1131,9 +1131,9 @@ transition: color 0.3s ease;
 
     .post {
         width:auto;
-        margin-left: 17px;
-        margin-right: 17px;
-        font-size: 0.9em;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
         line-height: 1.3em;
     }
 
