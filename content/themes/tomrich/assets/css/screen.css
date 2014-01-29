@@ -89,7 +89,7 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: "freight-text-pro", serif;
-    font-size: 2.15rem;
+    font-size: 22px;
     line-height: 1.52em;
     color: #353534;
     background-color: #F7F7F7;
@@ -187,21 +187,22 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #E4E4E4;
-    margin: 3.2em 0;
+    border-top: 2px solid rgba(0,39,59,.08);
+    margin: 3.2em auto;
     padding: 0;
+    width: 30%;
 }
 
 .ads {
-    margin: 1.3em 0;
+    margin: 1.3em auto;
 }
 
 .ads-foot {
-    margin: 3.2em 0 2.5em 0;
+    margin: 3.2em auto 2.5em auto;
 }
 
 .ads-foot-bottom {
-    margin: 2.5em 0;
+    margin: 2.5em auto;
 }
 
 blockquote {
@@ -383,7 +384,7 @@ table.plain {
 
 div.share-button {
     display: block;
-    margin: 75px auto -67px auto;
+    margin: 75px auto -73px auto;
 }
 
 div.shareintro {
