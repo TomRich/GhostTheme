@@ -11,46 +11,59 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 <main class="content" role="main">
-    <article class="{{post_class}}">
+    <div class="content-wrapper">
+        <article class="{{post_class}}">
 
-        {{! Everything inside the #post tags pulls data from the post }}
-        {{#post}}
+            {{! Everything inside the #post tags pulls data from the post }}
+            {{#post}}
 
-        {{! Everything below outputs content of the the post which has been published }}
-        <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}} by <a href="https://plus.google.com/100941137544314243089/?rel=author">Tom Rich</a></span>
+            {{! Everything below outputs content of the the post which has been published }}
+            <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}} by <a href="https://plus.google.com/100941137544314243089/?rel=author">Tom Rich</a></span>
 
-        <h1 class="post-title">{{{title}}}</h1>
+            <h1 class="post-title">{{{title}}}</h1>
 
-        <section class="post-content">
-            {{content}}
-        </section>
+            <section class="post-content">
+                {{content}}
+            </section>
 
-        {{/post}}
-        <div><hr /></div>
-            <div class="shareintro">If you enjoyed this post, please consider sharing it with others.</div>
-            <div class='share-button'></div>
-        <div><hr class="ads-foot"></div>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- BlogTR - Footer -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8488435643016457"
-                 data-ad-slot="4191673459"
-                 data-ad-format="auto"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        <hr class="ads-foot-bottom">
-        <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'tomrich';
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </article>
-
+            {{/post}}
+            <div><hr /></div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- BlogTR - Footer -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8488435643016457"
+                     data-ad-slot="4191673459"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            <hr class="ads-foot-bottom">
+                <section class="comment">
+                <div id="post_{{id}}_comments"></div>
+                <script>(function () {var c = document.getElementById('post_{{id}}_comments'),w = c.offsetWidth;c.innerHTML = '<div class="g-comments" data-href="{{@blog.url}}{{url}}" data-width="' + w + '" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>';})();</script>
+                </section>
+        </article>
+        <aside class="sidebar">
+            <div class="widget" id="youtube">
+                <span class="widget-title">YouTube</span>
+                <div class="g-ytsubscribe" data-channel="ipadup" data-layout="full" data-count="default"></div>
+            </div>
+            <hr class="sidebarhr">
+            <div class="widget" id="socials">
+                <span class="widget-title">Networks</span>
+                <ul>
+                    <a href="http://google.com/+TomRich"><li class="gplus-icon"></li></a>
+                    <a href="http://twitter.com/tomrich_"><li class="twit-icon"></li></a>
+                    <a href="http://facebook.com/ipadup"><li class="fb-icon"></li></a>
+                    <a href="#"><li class="linked-icon"></li></a>
+                </ul>
+            </div>
+            <hr class="sidebarhr">
+            <div class="widget" id="sidebar-ad">
+                <span class="widget-title">Advert</span>
+                <img src="http://placehold.it/300x250">
+            </div>
+        </aside>
+    </div>
 </main>

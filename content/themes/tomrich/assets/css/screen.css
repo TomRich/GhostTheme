@@ -89,10 +89,10 @@ body {
     height: 100%;
     max-height: 100%;
     font-family: "freight-text-pro", serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.52em;
     color: #353534;
-    background-color: #F7F7F7;
+    background-color: #eeeeee;
 }
 
 .post-content p {
@@ -122,14 +122,14 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5.5rem;
+    font-size: 5rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
@@ -138,19 +138,19 @@ h2 {
 }
 
 h3 {
-    font-size: 3.5rem;
-}
-
-h4 {
     font-size: 3rem;
 }
 
-h5 {
+h4 {
     font-size: 2.5rem;
 }
 
-h6 {
+h5 {
     font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
 }
 
 a {
@@ -458,35 +458,115 @@ main {
     opacity: 0.9;
 }
 
+.content-wrapper {
+    max-width: 1170px;
+    margin: 4rem auto;
+    padding: 0 50px 4rem 50px;
+}
+
+.content-wrapper.home {
+    position: relative;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
     width:80%;
-    max-width: 720px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #F7DDDC 1px solid;
+    margin: 0;
+    display: inline-block;
+    max-width: 685px;
     word-break: break-word;
     hyphens: auto;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.4);
+    border-radius: 4px;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #F39995 1px solid;
+/* SIDEBAR & CONTENT */
+
+.sidebar {
+    float: right;
+    display: inline-block;
+    width: 27%;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.4);
+    border-radius: 4px;
+}
+
+.sidebar.home {
     position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #F7F7F7;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #F7F7F7 0 0 0 5px;
+    top: 0;
+    margin-left: 25px;
+}
+
+.widget {
+    padding-bottom: 20px;
+}
+
+.widget span.widget-title {
+    color: #525252;
+    display: block;
+    font-family: 'Futura-pt' sans-serif;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 15px;
+    letter-spacing: 0.12em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#youtube {
+    text-align: center;
+    padding-top: 0;
+}
+
+#socials ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#socials ul li {
+    display: inline-block;
+    margin: 0 5px;
+    height: 45px;
+    width: 45px;
+    background: url('../img/socials.png');
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease;
+-moz-transition: opacity 0.2s ease;
+-o-transition: opacity 0.2s ease;
+transition: opacity 0.2s ease;
+}
+
+#socials ul li:hover {
+    opacity: 1;
+}
+
+#socials ul li.gplus-icon {
+    background-position: 0 0px;
+}
+
+#socials ul li.twit-icon {
+    background-position: 0 -48px;
+}
+
+#socials ul li.fb-icon {
+    background-position: 0 -96.2px;
+}
+
+#socials ul li.linked-icon {
+    background-position: 0 -144.3px;
+}
+
+.sidebarhr {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
 }
 
 .post-title {
@@ -704,54 +784,6 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-/* The author credit area after the post */
-.post-footer {
-    position: relative;
-    margin: 4rem 0 0 0;
-    padding: 4rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
-    height: 200px;
-}
-
-.post-footer h4 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.post-footer p {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    line-height: 1.65em;
-}
-
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin-right: 180px;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 4rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1.4rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
-}
-
-
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
    ========================================================================== */
@@ -778,6 +810,7 @@ nav ul li a:hover {
     position: relative;
     width: 80%;
     max-width: 700px;
+    height: 90px;
     margin: 4rem auto;
     font-family: 'Lato', sans-serif;
     font-size: 1.3rem;
@@ -819,7 +852,10 @@ nav ul li a:hover {
 }
 
 .older-posts {
-    right: 0;
+    display: block;
+    margin-top: 15px;
+    left: 41.7%;
+    z-index: 999;
 }
 
 .page-number {
@@ -829,6 +865,7 @@ nav ul li a:hover {
 
 .newer-posts {
     left: 0;
+    display: none;
 }
 
 .older-posts:hover,
@@ -837,216 +874,20 @@ nav ul li a:hover {
 }
 
 
-/* ==========================================================================
-   8. Footer - The bottom of every page
-   ========================================================================== */
-
-.site-footer {
-    position: relative;
-    margin: 8rem 0 0 0;
-    padding: 4rem 0;
-    border-top: #EBF2F6 1px solid;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.7em;
-    color: #BBC7CC;
-    text-align: center;
-    background: #F7FAFB;
-}
-
-.site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
-}
-
-.site-footer a:hover {
-    color: #50585D;
-}
-
-.poweredby .icon-ghost {
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:hover {
-    text-decoration: none;
-}
-
-.poweredby .icon-ghost:before {
-    font-size: 1rem;
-    margin-right: 0.2em;
-}
-
-/* The subscribe icon on the footer */
-.subscribe {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    margin-left: -15px;
-    border: #EBF2F6 1px solid;
-    text-align: center;
-    line-height: 2.4rem;
-    border-radius: 50px;
-    background: #fff;
-    transition: box-shadow 0.5s;
-}
-
-/* The RSS icon, inserted via icon font */
-.subscribe:before {
-    color: #D2DEE3;
-    font-size: 10px;
-    position: absolute;
-    top: 2px;
-    left: 9px;
-    font-weight: bold;
-    transition: color 0.5s ease;
-}
-
-/* Add a box shadow to on hover */
-.subscribe:hover {
-    box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
-    transition: box-shadow 0.25s;
-}
-
-.subscribe:hover:before {
-    color: #50585D;
-}
-
-/* CSS tooltip saying "Subscribe!" - initially hidden */
-.tooltip {
-    opacity:0;
-    display: inline-block;
-    padding: 4px 8px 5px 8px;
-    position:absolute;
-    top: -23px;
-    left: -23px;
-    color: rgba(255,255,255,0.9);
-    font-size: 1.1rem;
-    font-weight: bold;
-    line-height: 1em;
-    text-align: center;
-    background: #50585D;
-    border-radius:20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    transition: opacity 0.3s ease, top 0.3s ease;
-}
-
-/* The little chiclet arrow under the tooltip, pointing down */
-.tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
-    border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
-    margin-left:-5px;
-    z-index: 220;
-    width:0;
-}
-
-/* On hover, show the tooltip! */
-.subscribe:hover .tooltip {
-    opacity: 1;
-    top: -33px;
-}
-
-footer {
-    position: relative;
-    z-index: 100;
-    background-color: #2D2D2D;
-    width: 100%;
-    height: 100px;
-    text-align: center;
--webkit-transition: background-color 0.3s ease;
--moz-transition: background-color 0.3s ease;
--o-transition: background-color 0.3s ease;
-transition: background-color 0.3s ease;
--webkit-transform: translate(0px, 0px);
--moz-transform: translate(0px, 0px);
--o-transform: translate(0px, 0px);
--ms-transform: translate(0px, 0px);
-transform: translate(0px, 0px);
--webkit-transition: 0.15s ease;
--moz-transition: 0.15s ease;
--o-transition: 0.15s ease;
-transition: 0.15s ease;
-}
-
-footer.active {
-        -webkit-transform: translate(-220px, 0px);
-        -moz-transform: translate(-220px, 0px);
-        -o-transform: translate(-220px, 0px);
-        -ms-transform: translate(-220px, 0px);
-        transform: translate(-220px, 0px);
-}
-
-footer ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    max-height: 120px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-footer ul li {
-    display: inline-block;
-    margin: 25px;
-}
-
-.social-icons {
-    font-size: 2.5em;
-    color: rgba(197, 196, 196, 0.3);
--webkit-transition: color 0.3s ease;
--moz-transition: color 0.3s ease;
--o-transition: color 0.3s ease;
-transition: color 0.3s ease;
-}
-
-.social-icons:hover {
-    color: #333;
-}
-
-.email-icon-new, .google-plus-icon, .youtube-icon-new, .twitter-icon-new{
-    background: url(../img/sprites.png) no-repeat;
-    background-size: 100%;
-}
-
-.email-icon-new{
-    background-position: 0 0;
-    width: 64px;
-    height: 64px;
-}
-
-.google-plus-icon{
-    background-position: 0 -66.5px ;
-    width: 64px;
-    height: 64px;
-}
-
-.youtube-icon-new{
-    background-position: 0 -134.5px ;
-    width: 64px;
-    height: 64px;
-}
-
-.twitter-icon-new{
-    background-position: 0 -201.9px ;
-    width: 64px;
-    height: 64px;
-}
 
 /* ==========================================================================
    9. Media Queries - Smaller than 900px
    ========================================================================== */
+@media only screen and (max-width: 1280px) {
+    .sidebar {
+        display: none;
+    }
+
+    .post {
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 @media only screen and (max-width: 900px) {
 
@@ -1123,6 +964,10 @@ transition: color 0.3s ease;
         font-size: 1.6rem;
     }
 
+    .content-wrapper {
+        padding: 0 10px 4rem 10px;
+    }
+
     .inner, 
     .pagination {
         width: auto;
@@ -1132,8 +977,7 @@ transition: color 0.3s ease;
 
     .post {
         width:auto;
-        margin-left: 22px;
-        margin-right: 22px;
+        padding: 40px 25px;
         font-size: 0.95em;
         line-height: 1.4em;
     }

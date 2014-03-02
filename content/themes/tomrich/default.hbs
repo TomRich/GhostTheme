@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700" />
     <script type="text/javascript" src="//use.typekit.net/myq5bws.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="https://apis.google.com/js/platform.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     {{! Ghost outputs important style and meta data with this tag }}
@@ -40,22 +41,10 @@
     {{{body}}}
     </div><!--Container-->
     <div id="bottom_fade"></div>
-    <footer id="contact">
-        <ul>
-            <li><a href="mailto:Tom@RichWhizz.com"><i id="email" class="fa fa-envelope social-icons"></i></a></li>
-            <li><a href="http://youtube.com/tomrich"><i id="youtube" class="fa fa-youtube-play social-icons"></i></a></li>
-            <li><a href="http://twitter.com/tom_rich_"><i id ="twitter" class="fa fa-twitter social-icons"></i></a></li>
-            <li><a href="http://plus.google.com/100941137544314243089/"><i id ="gplus" class="fa fa-google-plus social-icons"></i></a></li>
-            <li><a href="http://www.linkedin.com/in/tomianrichardson"><i id ="linkedin" class="fa fa-linkedin social-icons"></i></a></li>
-        </ul>
-    </footer>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="/assets/js/index.js"></script>
-    <script type="text/javascript">
-        $('.share-button').share();
-    </script>
     <script type="text/javascript">
         function highlight() {
             $('pre code').each(function(i, e) {

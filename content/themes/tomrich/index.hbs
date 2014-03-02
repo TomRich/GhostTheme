@@ -12,7 +12,7 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-
+    <div class="content-wrapper home">
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
@@ -28,6 +28,28 @@
     </article>
 
     {{/foreach}}
+    <aside class="sidebar home">
+            <div class="widget" id="youtube">
+                <span class="widget-title">YouTube</span>
+                <div class="g-ytsubscribe" data-channel="ipadup" data-layout="full" data-count="default"></div>
+            </div>
+            <hr class="sidebarhr">
+            <div class="widget" id="socials">
+                <span class="widget-title">Networks</span>
+                <ul>
+                    <a href="http://google.com/+TomRich"><li class="gplus-icon"></li></a>
+                    <a href="http://twitter.com/tomrich_"><li class="twit-icon"></li></a>
+                    <a href="http://facebook.com/ipadup"><li class="fb-icon"></li></a>
+                    <a href="#"><li class="linked-icon"></li></a>
+                </ul>
+            </div>
+            <hr class="sidebarhr">
+            <div class="widget" id="sidebar-ad">
+                <span class="widget-title">Advert</span>
+                <img src="http://placehold.it/300x250">
+            </div>
+    </aside>
+    </div>
 
     {{!! After all the posts, we have the previous/next pagination links }}
     {{pagination}}
