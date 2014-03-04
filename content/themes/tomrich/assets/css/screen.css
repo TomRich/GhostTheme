@@ -459,13 +459,10 @@ main {
 }
 
 .content-wrapper {
+    position: relative;
     max-width: 1170px;
     margin: 4rem auto;
     padding: 0 50px 4rem 50px;
-}
-
-.content-wrapper.home {
-    position: relative;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -480,26 +477,22 @@ main {
     background-color: #ffffff;
     padding: 40px;
     box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.4);
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 /* SIDEBAR & CONTENT */
 
 .sidebar {
-    float: right;
     display: inline-block;
     width: 27%;
     max-width: 300px;
     background-color: #ffffff;
     padding: 40px;
     box-shadow: 0px 4px 2px rgba(204, 204, 204, 0.4);
-    border-radius: 4px;
-}
-
-.sidebar.home {
     position: absolute;
     top: 0;
-    margin-left: 25px;
+    right: 50px;
+    border-radius: 3px;
 }
 
 .widget {
