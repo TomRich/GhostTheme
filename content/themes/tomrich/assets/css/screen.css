@@ -396,6 +396,32 @@ main {
     padding-bottom: 80px;
 }
 
+#webfaction_ad {
+    display: block;
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #CEB5B5;
+    background-color: #000000;
+    opacity: 0.4;
+}
+
+#webfaction_ad a {
+    color: #CEB5B5;
+}
+
+#webfaction_ad i {
+    float: right;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 8px;
+}
+
 #bottom_fade {
     z-index: 99;
     position: fixed;
@@ -955,6 +981,10 @@ nav ul li a:hover {
         border: none;
         border-radius: 0;
         font-size: 1.6rem;
+    }
+
+    #webfaction_ad {
+        display: none;
     }
 
     .content-wrapper {
